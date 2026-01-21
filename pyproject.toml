@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "audio2text"
+version = "0.1.0"
+description = "Convert audio files to text using Whisper"
+authors = [{ name = "Your Name", email = "your@email.com" }]
+readme = "README.md"
+license = { file = "LICENSE" }
+requires-python = ">=3.10"
+dependencies = [
+    "openai-whisper==20231117",
+    "tqdm>=4.66.0"
+]
+
+[project.scripts]
+audio2text = "audio2text.cli:main"
+
+[tool.black]
+line-length = 88
+target-version = ['py311']
+
+[tool.isort]
+profile = "black"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
