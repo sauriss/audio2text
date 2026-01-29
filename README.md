@@ -61,8 +61,8 @@ audio2text /path/to/audio.aac --srt --vtt --model base
 audio2text /path/to/audio.mp3 --srt --model tiny
 
 # Example with absolute paths
-source ~/Documents/git_repos_personal_projects/Projects/via_gitcopilot/audio2text/.venv310/bin/activate \
-  && audio2text /Users/kumarsaurabh/Downloads/myrec-o.aac --srt
+source ~/path/to/audio2text/.venv310/bin/activate \
+  && audio2text /path/to/output-o.aac --srt
 ```
 
 Run without installing the package (optional):
@@ -73,9 +73,9 @@ PYTHONPATH=src python3 -m audio2text /path/to/audio.wav --srt --model base
 
 - Default: outputs are written under `output/target/<input-basename>.*` relative to the current working directory.
 - Override the directory with `--out` to provide a full basename:
-  - `audio2text input.wav --out /some/dir/myname` → writes `/some/dir/myname.txt` (and `.srt/.vtt`)
+  - `audio2text input.wav --out /path/to/myname` → writes `/path/to/myname.txt` (and `.srt/.vtt`)
 - You can also set a default via env var:
-  - `export AUDIO2TEXT_OUTPUT_DIR=/custom/output/dir` (used when `--out` is not provided)
+  - `export AUDIO2TEXT_OUTPUT_DIR=/path/to/output/dir` (used when `--out` is not provided)
 ```
 
 ### Docker
