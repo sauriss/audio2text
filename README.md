@@ -1,6 +1,6 @@
 # README.md
 
-## audio2text
+## audio2text(mac os)
 
 Convert audio files (wav/mp3/aac/m4a) to text using local Whisper (OpenAI) and ffmpeg.
 
